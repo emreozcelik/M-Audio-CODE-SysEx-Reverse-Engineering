@@ -25,3 +25,33 @@ Before sending any commands, we must first handshake with the device.
 | `6c` | Reply Global Settings | 4 |
 
 Port 4 is used for all read operations, while Port 1 is used for all write operations.
+
+#### Example Usages:
+
+Write Preset 01 (Command 61):
+```
+f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
+f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the first preset.
+```
+
+Read Preset 06 (Command 62):
+```
+f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
+f0 00 01 05 7f 31 05 62 06 f7 <- Preset Write Operation, 06 denotes the sixth preset.
+```
+
+Write Global Settings (Command 6a):
+```
+f0 00 01 05 7f 31 05 6a 00 04 00 00 00 01 f7 <- The ID is the third digit from the end, and the value is the last digit.
+f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
+```
+
+Read Global Settings (Command 6b):
+```
+f0 00 01 05 7f 31 05 6b 00 02 00 05 f7 <- The last digit represents the ID of the Global Setting.
+f0 00 01 05 7f 31 05 6b 00 02 00 00 f7 
+```
+
+Please keep in mind that the RAM is denoted by the number 00.
+
+...
