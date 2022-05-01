@@ -91,6 +91,7 @@ f0 00 01 05 7f 31 05 68 00 00 00 01 7f f7 <- 255
 
 ##### Write Global Settings (Command 6a - Port 1):
 ```
+f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 f0 00 01 05 7f 31 05 6a 00 04 00 00 00 01 f7 <- The ID is the third digit from the end, and the value is the last digit.
 f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
 ```
@@ -103,6 +104,7 @@ f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
 
 ##### Read Global Settings (Command 6b - Port 4):
 ```
+f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 f0 00 01 05 7f 31 05 6b 00 02 00 05 f7 <- The last digit represents the ID of the Global Setting.
 f0 00 01 05 7f 31 05 6b 00 02 00 00 f7 
 ```
