@@ -33,7 +33,7 @@ Port 4 is used for all read operations, while Port 1 is used for all write opera
 
 ### Example Usages:
 
-##### Write Preset 01 and RAM (Command 61 - Port 1):
+##### Write Preset 1 and RAM (Command 61 - Port 1):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7         <- Handshake
 f0 00 01 05 7f 31 05 61 0a 3b 01 ... f7     <- Preset Write Operation, 01 denotes the first preset.
@@ -48,7 +48,7 @@ f0 00 01 05 7f 31 05 61 0a 3b 00 ... f7     <- Preset Write Operation, 00 denote
 
 Keep in mind that the RAM is denoted by the number 00. All other operations, as far as I know, are performed entirely in RAM.
 
-##### Read Preset 06 and RAM (Command 62 - Port 4):
+##### Read Preset 6 and RAM (Command 62 - Port 4):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7     <- Handshake
 f0 00 01 05 7f 31 05 62 06 f7           <- Preset Read Operation, 06 denotes the sixth preset.
