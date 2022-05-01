@@ -357,7 +357,7 @@ Button 36 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 57 f7`
 
 ---
 
-### Colors
+### Colors:
 
 <table align="center">
 <tr><th>Pads</th><th>Buttons</th></tr>
