@@ -18,8 +18,8 @@ Before sending any commands, we must first handshake with the device.
 | `61` | Write Preset | 1 |
 | `62` | Read Preset | 4 |
 | `63` | Reply from The Read Operation | 4 |
-| `67` | Write at Location | 1 |
-| `68` | Read at Location | 4 |
+| `67` | Write a Value at the Offset | 1 |
+| `68` | Read a Value at the Offset | 4 |
 | `69` | Reply from The Read Operation | 4 |
 | `6a` | Write Global Settings | 1 |
 | `6b` | Read Global Settings | 4 |
