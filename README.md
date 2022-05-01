@@ -55,17 +55,24 @@ f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth pre
 
 > xx = ID
 
-##### Write Byte 0 (Command 67 - Port 1):
+##### Write Byte 0, 127, 128, 255 (Command 67 - Port 1):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 67 00 00 00 00 00 00 01 f7 <- Preset Write Operation, 01 denotes the first preset.
+f0 00 01 05 7f 31 05 67 00 00 00 00 00 00 01 f7 <- 0
+f0 00 01 05 7f 31 05 67 00 00 00 00 7f 00 01 f7 <- 127
+f0 00 01 05 7f 31 05 67 00 00 00 01 00 00 01 f7 <- 128
+f0 00 01 05 7f 31 05 67 00 00 00 01 7f 00 01 f7 <- 255
 ```
 
-`f0 00 01 05 7f 31 05 61 0a 3b xx yy f7`
+`f0 00 01 05 7f 31 05 67 00 00 00 xx yy zz ww f7`
 
-> xx = ID
+> xx = 127 Byte Offset
 
-> yy = Preset Bytes
+> yy = 1 Byte Offset
+
+> zz = Value Offset (?)
+
+> ww = Value
 
 ##### Read Byte 0, 127, 128, 255 (Command 68 - Port 4):
 ```
