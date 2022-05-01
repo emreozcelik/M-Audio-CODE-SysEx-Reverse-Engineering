@@ -46,8 +46,6 @@ f0 00 01 05 7f 31 05 61 0a 3b 00 ... f7     <- Preset Write Operation, 00 denote
 
 > yy = Preset Bytes
 
-Keep in mind that the RAM is denoted by the number 00. All other operations, as far as I know, are performed entirely in RAM.
-
 ##### Read Preset 6 and RAM (Command 62 - Port 4):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7     <- Handshake
@@ -58,6 +56,8 @@ f0 00 01 05 7f 31 05 62 06 f7           <- Preset Read Operation, 00 denotes the
 `f0 00 01 05 7f 31 05 62 xx f7`
 
 > xx = ID
+
+Keep in mind that the RAM is denoted by the number 00. All other operations, as far as I know, are performed entirely in RAM.
 
 ##### Write Byte 0, 127, 128, 255 (Command 67 - Port 1):
 ```
