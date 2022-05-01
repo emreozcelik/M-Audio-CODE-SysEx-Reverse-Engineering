@@ -47,7 +47,7 @@ f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth preset.
 ```
 
-> f0 00 01 05 7f 31 05 62 xx f7
+`f0 00 01 05 7f 31 05 62 xx f7`
 
 > xx = ID
 
@@ -69,7 +69,7 @@ f0 00 01 05 7f 31 05 6b 00 02 00 05 f7 <- The last digit represents the ID of th
 f0 00 01 05 7f 31 05 6b 00 02 00 00 f7 
 ```
 
-> f0 00 01 05 7f 31 05 6b 00 02 00 xx f7
+`f0 00 01 05 7f 31 05 6b 00 02 00 xx f7`
 
 > xx = ID
 
