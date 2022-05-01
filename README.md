@@ -19,7 +19,7 @@ Before sending any commands, we must first handshake with the device.
 | `62` | Read Preset | 4 |
 | `63` | Reply from The Read Operation | 4 |
 | `67` | Write a Value to the Byte | 1 |
-| `68` | Read a Value to the Byte | 4 |
+| `68` | Read a Value from the Byte | 4 |
 | `69` | Reply from The Read Operation | 4 |
 | `6a` | Write Global Settings | 1 |
 | `6b` | Read Global Settings | 4 |
