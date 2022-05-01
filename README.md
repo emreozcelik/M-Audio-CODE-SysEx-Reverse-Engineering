@@ -55,6 +55,33 @@ f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth pre
 
 > xx = ID
 
+##### Write Byte 0 (Command 67 - Port 1):
+```
+f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
+f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the first preset.
+```
+
+`f0 00 01 05 7f 31 05 61 0a 3b xx yy f7`
+
+> xx = ID
+
+> yy = Preset Bytes
+
+##### Read Byte 0, 127, 128, 255 (Command 68 - Port 4):
+```
+f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
+f0 00 01 05 7f 31 05 68 00 00 00 00 00 f7 <- 0 
+f0 00 01 05 7f 31 05 68 00 00 00 00 7f f7 <- 127
+f0 00 01 05 7f 31 05 68 00 00 00 01 00 f7 <- 128
+f0 00 01 05 7f 31 05 68 00 00 00 01 7f f7 <- 255
+```
+
+`f0 00 01 05 7f 31 05 68 00 00 00 xx yy f7`
+
+> xx = 127 Byte Offset
+
+> yy = 1 Byte Offset
+
 ##### Write Global Settings (Command 6a - Port 1):
 ```
 f0 00 01 05 7f 31 05 6a 00 04 00 00 00 01 f7 <- The ID is the third digit from the end, and the value is the last digit.
