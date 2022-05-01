@@ -11,6 +11,8 @@ f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 
 Before sending any commands, we must first handshake with the device.
 
+---
+
 ### SysEx Commands:
 
 | Command | Description | Port |
@@ -26,6 +28,8 @@ Before sending any commands, we must first handshake with the device.
 | `6c` | Reply from The Read Operation | 4 |
 
 Port 4 is used for all read operations, while Port 1 is used for all write operations.
+
+---
 
 ### Example Usages:
 
@@ -74,5 +78,231 @@ f0 00 01 05 7f 31 05 6b 00 02 00 00 f7
 > xx = ID
 
 Please keep in mind that the RAM is denoted by the number 00.
+
+---
+
+### Commands to Get Pad and Button Colors:
+
+<details><summary>Expand the List</summary>
+<p>
+
+Pad 1 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 3c f7`
+
+Pad 1 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 3d f7`
+
+Pad 2 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 47 f7`
+
+Pad 2 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 48 f7`
+
+Pad 3 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 52 f7`
+
+Pad 3 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 53 f7`
+
+Pad 4 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 5d f7`
+
+Pad 4 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 5e f7`
+
+Pad 5 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 68 f7`
+
+Pad 5 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 69 f7`
+
+Pad 6 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 73 f7`
+
+Pad 6 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 74 f7`
+
+Pad 7 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 7e f7`
+
+Pad 7 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 7f f7`
+
+Pad 8 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 09 f7`
+ 
+Pad 8 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 0a f7` 
+
+Pad 9 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 14 f7` 
+
+Pad 9 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 15 f7` 
+
+Pad 10 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 1f f7`
+
+Pad 10 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 20 f7` 
+
+Pad 11 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 2a f7`
+
+Pad 11 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 2b f7` 
+
+Pad 12 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 35 f7` 
+
+Pad 12 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 36 f7` 
+
+Pad 13 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 40 f7` 
+
+Pad 13 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 41 f7` 
+
+Pad 14 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 4b f7` 
+
+Pad 14 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 4c f7` 
+
+Pad 15 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 56 f7` 
+
+Pad 15 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 57 f7` 
+
+Pad 16 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 61 f7` 
+
+Pad 16 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 62 f7`
+
+---
+
+Button 1 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 6c f7` 
+
+Button 1 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 6d f7` 
+
+Button 2 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 7a f7` 
+
+Button 2 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 7b f7` 
+
+Button 3 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 08 f7` 
+
+Button 3 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 09 f7` 
+
+Button 4 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 16 f7` 
+
+Button 4 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 17 f7` 
+
+Button 5 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 24 f7` 
+
+Button 5 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 25 f7` 
+
+Button 6 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 32 f7` 
+
+Button 6 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 33 f7` 
+
+Button 7 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 40 f7` 
+
+Button 7 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 41 f7` 
+
+Button 8 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 4e f7` 
+
+Button 8 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 4f f7` 
+
+Button 9 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 5c f7` 
+
+Button 9 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 5d f7` 
+
+---
+
+Button 10 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 6a f7` 
+
+Button 10 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 6b f7` 
+
+Button 11 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 02 78 f7` 
+
+Button 11 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 02 79 f7` 
+
+Button 12 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 06 f7` 
+
+Button 12 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 07 f7` 
+
+Button 13 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 14 f7` 
+
+Button 13 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 15 f7` 
+
+Button 14 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 22 f7` 
+
+Button 14 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 23 f7` 
+
+Button 15 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 30 f7` 
+
+Button 15 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 31 f7` 
+
+Button 16 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 3e f7` 
+
+Button 16 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 3f f7` 
+
+Button 17 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 4c f7` 
+
+Button 17 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 4d f7` 
+
+Button 18 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 5a f7` 
+
+Button 18 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 5b f7` 
+
+---
+
+Button 19 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 68 f7` 
+
+Button 19 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 69 f7` 
+
+Button 20 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 03 76 f7` 
+
+Button 20 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 03 77 f7` 
+
+Button 21 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 04 f7` 
+
+Button 21 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 05 f7` 
+
+Button 22 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 12 f7` 
+
+Button 22 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 13 f7` 
+
+Button 23 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 20 f7` 
+
+Button 23 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 21 f7` 
+
+Button 24 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 2e f7` 
+
+Button 24 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 2f f7` 
+
+Button 25 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 3c f7`
+ 
+Button 25 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 3d f7` 
+
+Button 26 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 4a f7` 
+
+Button 26 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 4b f7` 
+
+Button 27 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 58 f7` 
+
+Button 27 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 59 f7` 
+
+---
+
+Button 28 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 66 f7` 
+
+Button 28 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 67 f7` 
+
+Button 29 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 04 74 f7` 
+
+Button 29 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 04 75 f7` 
+
+Button 30 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 05 02 f7` 
+
+Button 30 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 03 f7` 
+
+Button 31 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 05 10 f7` 
+
+Button 31 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 11 f7` 
+
+Button 32 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 05 1e f7` 
+
+Button 32 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 1f f7` 
+
+Button 33 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 05 2c f7` 
+
+Button 33 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 2d f7` 
+
+Button 34 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 05 3a f7` 
+
+Button 34 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 3b f7` 
+
+Button 35 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 05 48 f7` 
+
+Button 35 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 49 f7` 
+
+Button 36 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 05 56 f7`
+
+Button 36 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 57 f7`
+
+</p>
+</details>
 
 # WIP
