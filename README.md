@@ -119,7 +119,7 @@ f0 00 01 05 7f 31 05 6b 00 02 00 00 f7
 
 ---
 
-### Commands to Get Pad and Button Colors:
+### Commands to Read Pad and Button Colors:
 
 <details><summary>Expand the List</summary>
 <p>
