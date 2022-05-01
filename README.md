@@ -58,7 +58,7 @@ f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth pre
 ##### Write Byte 0 (Command 67 - Port 1):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the first preset.
+f0 00 01 05 7f 31 05 67 00 00 00 00 00 00 01 f7 <- Preset Write Operation, 01 denotes the first preset.
 ```
 
 `f0 00 01 05 7f 31 05 61 0a 3b xx yy f7`
