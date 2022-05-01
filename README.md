@@ -43,7 +43,7 @@ f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the f
 
 > xx = ID
 
-> yy = Preset Info
+> yy = Preset Bytes
 
 ##### Read Preset 06 (Command 62 - Port 4):
 ```
