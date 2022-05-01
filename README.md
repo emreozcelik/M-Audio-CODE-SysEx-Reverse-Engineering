@@ -36,7 +36,7 @@ Port 4 is used for all read operations, while Port 1 is used for all write opera
 ##### Write Preset 01 (Command 61 - Port 1):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the first preset.
+f0 00 01 05 7f 31 05 61 0a 3b 01 ... f7 <- Preset Write Operation, 01 denotes the first preset.
 ```
 
 `f0 00 01 05 7f 31 05 61 0a 3b xx yy f7`
