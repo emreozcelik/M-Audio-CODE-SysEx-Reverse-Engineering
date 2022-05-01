@@ -37,9 +37,9 @@ f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the f
 
 `f0 00 01 05 7f 31 05 61 0a 3b xx yy f7`
 
-`xx = ID`
+> xx = ID
 
-`yy = Preset Info`
+> yy = Preset Info
 
 Read Preset 06 (Command 62 - Port 4):
 ```
@@ -47,9 +47,9 @@ f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth preset.
 ```
 
-`f0 00 01 05 7f 31 05 62 xx f7`
+> f0 00 01 05 7f 31 05 62 xx f7
 
-`xx = ID`
+> xx = ID
 
 Write Global Settings (Command 6a - Port 1):
 ```
@@ -59,9 +59,9 @@ f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
 
 `f0 00 01 05 7f 31 05 6a 00 04 00 xx 00 yy f7`
 
-`xx = ID`
+> xx = ID
 
-`yy = Value`
+> yy = Value
 
 Read Global Settings (Command 6b - Port 4):
 ```
@@ -69,9 +69,9 @@ f0 00 01 05 7f 31 05 6b 00 02 00 05 f7 <- The last digit represents the ID of th
 f0 00 01 05 7f 31 05 6b 00 02 00 00 f7 
 ```
 
-`f0 00 01 05 7f 31 05 6b 00 02 00 xx f7`
+> f0 00 01 05 7f 31 05 6b 00 02 00 xx f7
 
-`xx = ID`
+> xx = ID
 
 Please keep in mind that the RAM is denoted by the number 00.
 
