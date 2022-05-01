@@ -3,9 +3,9 @@
 ### Handshake:
 
 ```
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 7e 7f 06 01 f7
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
+f0 00 01 05 7f 31 05 6d 00 01 01 f7     <- Handshake
+f0 7e 7f 06 01 f7                       <- Get SysEx ID
+f0 00 01 05 7f 31 05 6d 00 01 01 f7     <- Handshake
 ...
 ```
 
@@ -35,8 +35,8 @@ Port 4 is used for all read operations, while Port 1 is used for all write opera
 
 ##### Write Preset 01 (Command 61 - Port 1):
 ```
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 61 0a 3b 01 ... f7 <- Preset Write Operation, 01 denotes the first preset.
+f0 00 01 05 7f 31 05 6d 00 01 01 f7         <- Handshake
+f0 00 01 05 7f 31 05 61 0a 3b 01 ... f7     <- Preset Write Operation, 01 denotes the first preset.
 ```
 
 `f0 00 01 05 7f 31 05 61 0a 3b xx yy f7`
@@ -47,8 +47,8 @@ f0 00 01 05 7f 31 05 61 0a 3b 01 ... f7 <- Preset Write Operation, 01 denotes th
 
 ##### Read Preset 06 (Command 62 - Port 4):
 ```
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth preset.
+f0 00 01 05 7f 31 05 6d 00 01 01 f7     <- Handshake
+f0 00 01 05 7f 31 05 62 06 f7           <- Preset Read Operation, 06 denotes the sixth preset.
 ```
 
 `f0 00 01 05 7f 31 05 62 xx f7`
@@ -57,11 +57,11 @@ f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth pre
 
 ##### Write Byte 0, 127, 128, 255 (Command 67 - Port 1):
 ```
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 67 00 00 00 00 00 00 01 f7 <- 0
-f0 00 01 05 7f 31 05 67 00 00 00 00 7f 00 01 f7 <- 127
-f0 00 01 05 7f 31 05 67 00 00 00 01 00 00 01 f7 <- 128
-f0 00 01 05 7f 31 05 67 00 00 00 01 7f 00 01 f7 <- 255
+f0 00 01 05 7f 31 05 6d 00 01 01 f7                 <- Handshake
+f0 00 01 05 7f 31 05 67 00 00 00 00 00 00 01 f7     <- 0
+f0 00 01 05 7f 31 05 67 00 00 00 00 7f 00 01 f7     <- 127
+f0 00 01 05 7f 31 05 67 00 00 00 01 00 00 01 f7     <- 128
+f0 00 01 05 7f 31 05 67 00 00 00 01 7f 00 01 f7     <- 255
 ```
 
 `f0 00 01 05 7f 31 05 67 00 00 00 xx yy zz ww f7`
@@ -76,11 +76,11 @@ f0 00 01 05 7f 31 05 67 00 00 00 01 7f 00 01 f7 <- 255
 
 ##### Read Byte 0, 127, 128, 255 (Command 68 - Port 4):
 ```
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 68 00 00 00 00 00 f7 <- 0 
-f0 00 01 05 7f 31 05 68 00 00 00 00 7f f7 <- 127
-f0 00 01 05 7f 31 05 68 00 00 00 01 00 f7 <- 128
-f0 00 01 05 7f 31 05 68 00 00 00 01 7f f7 <- 255
+f0 00 01 05 7f 31 05 6d 00 01 01 f7         <- Handshake
+f0 00 01 05 7f 31 05 68 00 00 00 00 00 f7   <- 0 
+f0 00 01 05 7f 31 05 68 00 00 00 00 7f f7   <- 127
+f0 00 01 05 7f 31 05 68 00 00 00 01 00 f7   <- 128
+f0 00 01 05 7f 31 05 68 00 00 00 01 7f f7   <- 255
 ```
 
 `f0 00 01 05 7f 31 05 68 00 00 00 xx yy f7`
@@ -91,8 +91,8 @@ f0 00 01 05 7f 31 05 68 00 00 00 01 7f f7 <- 255
 
 ##### Write Global Settings (Command 6a - Port 1):
 ```
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 6a 00 04 00 00 00 01 f7 <- The ID is the third digit from the end, and the value is the last digit.
+f0 00 01 05 7f 31 05 6d 00 01 01 f7          	<- Handshake
+f0 00 01 05 7f 31 05 6a 00 04 00 00 00 01 f7	<- The ID is the third digit from the end, and the value is the last digit.
 f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
 ```
 
@@ -104,8 +104,8 @@ f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
 
 ##### Read Global Settings (Command 6b - Port 4):
 ```
-f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 6b 00 02 00 05 f7 <- The last digit represents the ID of the Global Setting.
+f0 00 01 05 7f 31 05 6d 00 01 01 f7         <- Handshake
+f0 00 01 05 7f 31 05 6b 00 02 00 05 f7      <- The last digit represents the ID of the Global Setting.
 f0 00 01 05 7f 31 05 6b 00 02 00 00 f7 
 ```
 
