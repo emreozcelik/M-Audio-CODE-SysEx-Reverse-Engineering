@@ -15,6 +15,8 @@ Before sending any commands, we must first handshake with the device.
 
 ### SysEx Commands:
 
+<div align="center">
+
 | Command | Description | Port |
 | :--- | :--- | :--- |
 | `61` | Write Preset | 1 |
@@ -29,9 +31,11 @@ Before sending any commands, we must first handshake with the device.
 
 Port 4 is used for all read operations, while Port 1 is used for all write operations.
 
+</div>
+
 ---
 
-### Example Usages:
+### Usages:
 
 ##### Write Preset 1 and RAM (Command 61 - Port 1):
 ```
@@ -121,8 +125,8 @@ f0 00 01 05 7f 31 05 6b 00 02 00 00 f7
 
 ### Commands to Read Pad and Button Colors:
 
-<details><summary>Expand the List</summary>
-<p>
+<details align="center"><summary>Expand the List</summary>
+<p align="center">
 
 ### Pads
 
@@ -350,5 +354,54 @@ Button 36 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 57 f7`
 
 </p>
 </details>
+
+---
+
+### Colors
+
+<table align="center">
+<tr><th>Pads</th><th>Buttons</th></tr>
+<tr><td valign="top">
+
+| Color | Code |
+| :--- | :--- |
+| `00` | Off |
+| `01` | Chartreuse |
+| `02` | Green |
+| `03` | Aqua |
+| `04` | Cyan |
+| `05` | Azura |
+| `06` | Blue |
+| `07` | Violet |
+| `08` | Magenta |
+| `09` | Rose |
+| `0A` | Red |
+| `0B` | Orange |
+| `0C` | Yellow |
+| `0D` | White |
+
+</td><td valign="top" style="width: 333px;">
+
+| Color | Code |
+| :--- | :--- |
+| `00` | Off |
+| `01` | Green |
+| `02` | Cyan |
+| `03` | Blue |
+| `04` | Magenta |
+| `05` | Red |
+| `06` | Yellow |
+| `07` | White |
+
+</td></tr></table>
+
+---
+
+### Changing Pad and Button Colors:
+
+
+`f0 00 01 05 7f 31 05 67 00 00 00 01 61 00 0A f7`
+
+In the above example you can set the 16th Pad color to Red. 
 
 # WIP
