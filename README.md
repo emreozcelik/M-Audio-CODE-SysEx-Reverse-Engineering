@@ -1,6 +1,6 @@
 # M-Audio CODE | SysEx Reverse Engineering
 
-#### Handshake:
+### Handshake:
 
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
@@ -11,7 +11,7 @@ f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 
 Before sending any commands, we must first handshake with the device.
 
-#### SysEx Commands:
+### SysEx Commands:
 
 | Command | Description | Port |
 | :--- | :--- | :--- |
@@ -27,9 +27,9 @@ Before sending any commands, we must first handshake with the device.
 
 Port 4 is used for all read operations, while Port 1 is used for all write operations.
 
-#### Example Usages:
+### Example Usages:
 
-Write Preset 01 (Command 61 - Port 1):
+##### Write Preset 01 (Command 61 - Port 1):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the first preset.
@@ -41,7 +41,7 @@ f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the f
 
 > yy = Preset Info
 
-Read Preset 06 (Command 62 - Port 4):
+##### Read Preset 06 (Command 62 - Port 4):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth preset.
@@ -51,7 +51,7 @@ f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth pre
 
 > xx = ID
 
-Write Global Settings (Command 6a - Port 1):
+##### Write Global Settings (Command 6a - Port 1):
 ```
 f0 00 01 05 7f 31 05 6a 00 04 00 00 00 01 f7 <- The ID is the third digit from the end, and the value is the last digit.
 f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
@@ -63,7 +63,7 @@ f0 00 01 05 7f 31 05 6a 00 04 00 04 00 00 f7
 
 > yy = Value
 
-Read Global Settings (Command 6b - Port 4):
+##### Read Global Settings (Command 6b - Port 4):
 ```
 f0 00 01 05 7f 31 05 6b 00 02 00 05 f7 <- The last digit represents the ID of the Global Setting.
 f0 00 01 05 7f 31 05 6b 00 02 00 00 f7 
