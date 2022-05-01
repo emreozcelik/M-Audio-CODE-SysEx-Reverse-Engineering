@@ -122,6 +122,8 @@ Please keep in mind that the RAM is denoted by the number 00.
 <details><summary>Expand the List</summary>
 <p>
 
+### Pads
+
 Pad 1 Color 1: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 3c f7`
 
 Pad 1 Color 2: `f0 00 01 05 7f 31 05 68 0a 3b 00 00 3d f7`
@@ -192,8 +194,8 @@ Pad 16 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 61 f7`
 
 Pad 16 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 62 f7`
 
----
-
+### Buttons
+ 
 Button 1 Color 1: `f0 00 01 05 7f 31 05 68 00 00 00 01 6c f7` 
 
 Button 1 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 01 6d f7` 
