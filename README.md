@@ -70,7 +70,7 @@ f0 00 01 05 7f 31 05 67 00 00 00 01 7f 00 01 f7 <- 255
 
 > yy = 1 Byte Offset
 
-> zz = Could be Second Byte Value
+> zz = Second Byte Value
 
 > ww = Value
 
