@@ -38,7 +38,7 @@ f0 00 01 05 7f 31 05 61 0a 3b 01 ... <- Preset Write Operation, 01 denotes the f
 Read Preset 06 (Command 62 - Port 4):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
-f0 00 01 05 7f 31 05 62 06 f7 <- Preset Write Operation, 06 denotes the sixth preset.
+f0 00 01 05 7f 31 05 62 06 f7 <- Preset Read Operation, 06 denotes the sixth preset.
 ```
 
 Write Global Settings (Command 6a - Port 1):
