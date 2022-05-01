@@ -401,9 +401,9 @@ Button 36 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 57 f7`
 
 ##### Example: Changing the Color of the 16th Pad
 
-`f0 00 01 05 7f 31 05 67 00 00 00 01 61 00 0A f7` 
+`f0 00 01 05 7f 31 05 67 00 00 00 01 61 00 0a f7` 
 
-> In this case, we used 01 61 as the address, which corresponds to the 16th pad. And red is represented by 0A.
+> In this case, we used 01 61 as the address, which corresponds to the 16th pad. And red is represented by 0a.
 
 ##### Example: Changing the Color of the 4th Button
 
