@@ -399,9 +399,16 @@ Button 36 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 57 f7`
 
 ### Changing Pad and Button Colors:
 
+##### Example: Changing the Color of the 16th Pad
 
-`f0 00 01 05 7f 31 05 67 00 00 00 01 61 00 0A f7`
+`f0 00 01 05 7f 31 05 67 00 00 00 01 61 00 0A f7` 
 
-In the above example you can set the 16th Pad color to Red. 
+> In this case, we used 01 61 as the address, which corresponds to the 16th pad. And red is represented by 0A.
+
+##### Example: Changing the Color of the 4th Button
+
+`f0 00 01 05 7f 31 05 67 00 00 00 02 16 00 04 f7`
+
+> In this case, we used 02 16 as the address, which corresponds to the 4th button in the first bank, and set it to Magenta.
 
 # WIP
