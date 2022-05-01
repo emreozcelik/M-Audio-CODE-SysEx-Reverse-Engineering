@@ -6,6 +6,7 @@
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 f0 7e 7f 06 01 f7
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
+...
 ```
 
 Before sending any commands, we must first handshake with the device.
@@ -54,4 +55,4 @@ f0 00 01 05 7f 31 05 6b 00 02 00 00 f7
 
 Please keep in mind that the RAM is denoted by the number 00.
 
-...
+# WIP
