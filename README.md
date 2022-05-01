@@ -19,13 +19,13 @@ Before sending any commands, we must first handshake with the device.
 | :--- | :--- | :--- |
 | `61` | Write Preset | 1 |
 | `62` | Read Preset | 4 |
-| `63` | Reply from The Read Operation | 4 |
+| `63` | Reply from The Read Preset Operation | 4 |
 | `67` | Write a Value to the Byte | 1 |
 | `68` | Read a Value from the Byte | 4 |
-| `69` | Reply from The Read Operation | 4 |
+| `69` | Reply from The Read Value Operation | 4 |
 | `6a` | Write Global Settings | 1 |
 | `6b` | Read Global Settings | 4 |
-| `6c` | Reply from The Read Operation | 4 |
+| `6c` | Reply from The Read Global Settings Operation | 4 |
 
 Port 4 is used for all read operations, while Port 1 is used for all write operations.
 
@@ -33,10 +33,11 @@ Port 4 is used for all read operations, while Port 1 is used for all write opera
 
 ### Example Usages:
 
-##### Write Preset 01 (Command 61 - Port 1):
+##### Write Preset 01 and RAM (Command 61 - Port 1):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7         <- Handshake
 f0 00 01 05 7f 31 05 61 0a 3b 01 ... f7     <- Preset Write Operation, 01 denotes the first preset.
+f0 00 01 05 7f 31 05 61 0a 3b 00 ... f7     <- Preset Write Operation, 00 denotes the RAM.
 ```
 
 `f0 00 01 05 7f 31 05 61 0a 3b xx yy f7`
@@ -45,10 +46,13 @@ f0 00 01 05 7f 31 05 61 0a 3b 01 ... f7     <- Preset Write Operation, 01 denote
 
 > yy = Preset Bytes
 
-##### Read Preset 06 (Command 62 - Port 4):
+Keep in mind that the RAM is denoted by the number 00. All other operations, as far as I know, are performed entirely in RAM.
+
+##### Read Preset 06 and RAM (Command 62 - Port 4):
 ```
 f0 00 01 05 7f 31 05 6d 00 01 01 f7     <- Handshake
 f0 00 01 05 7f 31 05 62 06 f7           <- Preset Read Operation, 06 denotes the sixth preset.
+f0 00 01 05 7f 31 05 62 06 f7           <- Preset Read Operation, 00 denotes the RAM.
 ```
 
 `f0 00 01 05 7f 31 05 62 xx f7`
@@ -112,8 +116,6 @@ f0 00 01 05 7f 31 05 6b 00 02 00 00 f7
 `f0 00 01 05 7f 31 05 6b 00 02 00 xx f7`
 
 > xx = ID
-
-Please keep in mind that the RAM is denoted by the number 00.
 
 ---
 
