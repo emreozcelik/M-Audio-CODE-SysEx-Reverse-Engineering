@@ -8,7 +8,7 @@ f0 7e 7f 06 01 f7
 f0 00 01 05 7f 31 05 6d 00 01 01 f7 <- Handshake
 ```
 
-We must first handshake with the device before sending any commands.
+Before sending any commands, we must first handshake with the device.
 
 #### SysEx Commands:
 
