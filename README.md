@@ -410,5 +410,3 @@ Button 36 Color 2: `f0 00 01 05 7f 31 05 68 00 00 00 05 57 f7`
 `f0 00 01 05 7f 31 05 67 00 00 00 02 16 00 04 f7`
 
 > In this case, we used 02 16 as the address, which corresponds to the 4th button in the first bank, and set it to Magenta.
-
-# WIP
